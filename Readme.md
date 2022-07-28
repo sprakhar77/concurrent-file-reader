@@ -15,7 +15,7 @@ fbcn5UAVanZf6UtG,2018-12-08T09:30:00+00:00
 ```
 ### Solution:
 
-This distributed log file reader concurrently reads chunks of the file (chunk size can be specified) via a user specified thread pool. All the results read are then summed up find the most active cookie. The program can also be run across diferent notes to provide multi layer distribution of work. For eg. The program can be run in map-reduce style on 20 nodes, each of which run 1000 go routines to read chunks of a file that is in terabytes or even petabytes.
+This distributed log file reader concurrently reads chunks of the file (chunk size can be specified) via a user specified thread pool. All the results read are then summed up to find the most active cookie. The program can also be run across diferent nodes to provide multi layer distribution of work. For eg. The program can run in map-reduce style on 20 nodes, each of which run 1000 go routines to read chunks of a file that is in terabytes or even petabytes.
 
 ### Assumptions:
 - If multiple cookies meet that criteria, all of them are returned on separate lines.
